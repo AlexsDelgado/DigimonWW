@@ -1498,6 +1498,7 @@ MonoBehaviour:
   texto: {fileID: 202266574}
   UI_instance: {fileID: 179073017}
   state: 0
+  sceneInfo: {fileID: 11400000, guid: eda938d831b313342aa277ccd7f54c05, type: 2}
 --- !u!4 &1028469144
 Transform:
   m_ObjectHideFlags: 0

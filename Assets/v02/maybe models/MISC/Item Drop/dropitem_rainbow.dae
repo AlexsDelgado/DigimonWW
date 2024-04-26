@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.77.0 commit date:2016-03-18, commit time:12:34, hash:22a2853</authoring_tool>
+    </contributor>
+    <created>2022-01-11T08:08:11</created>
+    <modified>2022-01-11T08:08:11</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_images>
+    <image id="dropitem_rainbow_png" name="dropitem_rainbow_png">
+      <init_from>dropitem_rainbow.png</init_from>
+    </image>
+  </library_images>
+  <library_effects>
+    <effect id="dropitem_rainbow-effect">
+      <profile_COMMON>
+        <newparam sid="dropitem_rainbow_png-surface">
+          <surface type="2D">
+            <init_from>dropitem_rainbow_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="dropitem_rainbow_png-sampler">
+          <sampler2D>
+            <source>dropitem_rainbow_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="dropitem_rainbow_png-sampler" texcoord="GeometrySource2"/>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.5 0.5 0.5 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">1</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="dropitem_rainbow-material" name="dropitem_rainbow">
+      <instance_effect url="#dropitem_rainbow-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="dropitem-mesh" name="dropitem">
+      <mesh>
+        <source id="dropitem-mesh-positions">
+          <float_array id="dropitem-mesh-positions-array" count="360">0.316751 0.636862 0.316751 -0.316751 0.636862 0.316751 -0.316751 0.003359973 0.316751 0.316751 0.003359973 0.316751 0.316751 0.636862 -0.316751 -0.316751 0.636862 -0.316751 -0.316751 0.636862 0.316751 0.316751 0.636862 0.316751 0.316751 0.003359973 -0.316751 -0.316751 0.003359973 -0.316751 -0.316751 0.636862 -0.316751 0.316751 0.636862 -0.316751 0.316751 0.003359973 0.316751 -0.316751 0.003359973 0.316751 -0.316751 0.003359973 -0.316751 0.316751 0.003359973 -0.316751 0.316751 0.636862 -0.316751 0.316751 0.636862 0.316751 0.316751 0.003359973 0.316751 0.316751 0.003359973 -0.316751 -0.316751 0.636862 0.316751 -0.316751 0.636862 -0.316751 -0.316751 0.003359973 -0.316751 -0.316751 0.003359973 0.316751 -0.1820549 0.649531 0.322572 -0.326661 0.49876 0.325774 -0.326658 0.645215 0.187705 -0.326661 0.49876 0.325774 -0.327486 0.651109 0.329105 -0.326658 0.645215 0.187705 -0.1820549 0.649531 0.322572 -0.327486 0.651109 0.329105 -0.326661 0.49876 0.325774 -0.326658 0.645215 0.187705 -0.327486 0.651109 0.329105 -0.1820549 0.649531 0.322572 -0.329887 0.6484 -0.183611 -0.328691 0.4976 -0.328217 -0.194952 0.648018 -0.328215 -0.328691 0.4976 -0.328217 -0.336464 0.649786 -0.329042 -0.194952 0.648018 -0.328215 -0.329887 0.6484 -0.183611 -0.336464 0.649786 -0.329042 -0.328691 0.4976 -0.328217 -0.194952 0.648018 -0.328215 -0.336464 0.649786 -0.329042 -0.329887 0.6484 -0.183611 0.1820549 0.649531 -0.322572 0.326661 0.49876 -0.325774 0.326658 0.645215 -0.187705 0.326661 0.49876 -0.325774 0.327486 0.651109 -0.329105 0.326658 0.645215 -0.187705 0.1820549 0.649531 -0.322572 0.327486 0.651109 -0.329105 0.326661 0.49876 -0.325774 0.326658 0.645215 -0.187705 0.327486 0.651109 -0.329105 0.1820549 0.649531 -0.322572 0.329887 0.6484 0.183611 0.328691 0.4976 0.328217 0.194952 0.648018 0.328215 0.328691 0.4976 0.328217 0.336464 0.649786 0.329042 0.194952 0.648018 0.328215 0.329887 0.6484 0.183611 0.336464 0.649786 0.329042 0.328691 0.4976 0.328217 0.194952 0.648018 0.328215 0.336464 0.649786 0.329042 0.329887 0.6484 0.183611 0.327688 -0.01034694 -0.183611 0.326492 0.140453 -0.328217 0.192752 -0.009964942 -0.328215 0.326492 0.140453 -0.328217 0.334264 -0.01173299 -0.329042 0.192752 -0.009964942 -0.328215 0.327688 -0.01034694 -0.183611 0.334264 -0.01173299 -0.329042 0.326492 0.140453 -0.328217 0.192752 -0.009964942 -0.328215 0.334264 -0.01173299 -0.329042 0.327688 -0.01034694 -0.183611 -0.327688 -0.01034694 0.183611 -0.326492 0.140453 0.328217 -0.192752 -0.009964942 0.328215 -0.326492 0.140453 0.328217 -0.334264 -0.01173299 0.329042 -0.192752 -0.009964942 0.328215 -0.327688 -0.01034694 0.183611 -0.334264 -0.01173299 0.329042 -0.326492 0.140453 0.328217 -0.192752 -0.009964942 0.328215 -0.334264 -0.01173299 0.329042 -0.327688 -0.01034694 0.183611 -0.184254 -0.01147794 -0.322572 -0.32886 0.139292 -0.325774 -0.328858 -0.007161974 -0.187705 -0.32886 0.139292 -0.325774 -0.329685 -0.01305598 -0.329105 -0.328858 -0.007161974 -0.187705 -0.184254 -0.01147794 -0.322572 -0.329685 -0.01305598 -0.329105 -0.32886 0.139292 -0.325774 -0.328858 -0.007161974 -0.187705 -0.329685 -0.01305598 -0.329105 -0.184254 -0.01147794 -0.322572 0.184254 -0.01147794 0.322572 0.32886 0.139292 0.325774 0.328858 -0.007161974 0.187705 0.32886 0.139292 0.325774 0.329685 -0.01305598 0.329105 0.328858 -0.007161974 0.187705 0.184254 -0.01147794 0.322572 0.329685 -0.01305598 0.329105 0.32886 0.139292 0.325774 0.328858 -0.007161974 0.187705 0.329685 -0.01305598 0.329105 0.184254 -0.01147794 0.322572</float_array>
+          <technique_common>
+            <accessor source="#dropitem-mesh-positions-array" count="120" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="dropitem-mesh-normals">
+          <float_array id="dropitem-mesh-normals-array" count="114">0 0 1 0 1 0 0 0 -1 0 -1 0 1 0 0 -1 0 0 0.5729722 -0.5622082 -0.5963428 -0.9999701 -0.005292177 -0.005634903 0.04463177 -0.02159547 0.9987701 0.008972048 0.9990944 -0.04159283 0.6124859 -0.5445787 0.5729705 0.005779802 -0.005125522 -0.9999703 -0.9977151 -0.05071645 0.04463744 0.01243966 0.9998825 0.008966803 -0.5729722 -0.5622082 0.5963428 0.9999701 -0.005292177 0.005634903 -0.04463177 -0.02159547 -0.9987701 -0.008972048 0.9990944 0.04159283 -0.6124859 -0.5445787 -0.5729705 -0.005779802 -0.005125522 0.9999703 0.9977151 -0.05071645 -0.04463744 -0.01243966 0.9998825 -0.008966803 -0.6124833 0.5445801 0.572972 -0.005779206 0.005125582 -0.9999703 0.9977157 0.05071049 0.04463076 -0.01243972 -0.9998825 0.008966624 0.6124833 0.5445801 -0.572972 0.005779206 0.005125582 0.9999703 -0.9977157 0.05071049 -0.04463076 0.01243972 -0.9998825 -0.008966624 0.5729697 0.5622093 0.5963444 -0.9999703 0.005292177 0.005627989 0.04463171 0.02159565 -0.9987701 0.008972227 -0.9990944 0.04159295 -0.5729697 0.5622093 -0.5963444 0.9999703 0.005292177 -0.005627989 -0.04463171 0.02159565 0.9987701 -0.008972227 -0.9990944 -0.04159295</float_array>
+          <technique_common>
+            <accessor source="#dropitem-mesh-normals-array" count="38" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="dropitem-mesh-map-0">
+          <float_array id="dropitem-mesh-map-0-array" count="264">0.662614 0.336084 0.335185 0.336084 0.335185 0.008653998 0.662615 0.008653998 0.662614 0.336084 0.335185 0.008653998 0.661839 0.664261 0.335249 0.664261 0.335185 0.336084 0.662614 0.336084 0.661839 0.664261 0.335185 0.336084 0.661064 0.99076 0.335312 0.99076 0.335249 0.664261 0.661839 0.664261 0.661064 0.99076 0.335249 0.664261 0.317252 0.673423 0.002207994 0.673423 0.002207994 0.35838 0.317253 0.35838 0.317252 0.673423 0.002207994 0.35838 0.990044 0.336084 0.662614 0.336084 0.662615 0.008653998 0.990044 0.008653998 0.990044 0.336084 0.662615 0.008653998 0.335185 0.336084 0.007754981 0.336084 0.007754981 0.008653998 0.335185 0.008653998 0.335185 0.336084 0.007754981 0.008653998 0.177981 0.896187 0.005938947 0.995515 0.005938947 0.796859 0.873236 0.971732 0.844917 0.807736 0.786496 0.993179 0.76237 0.612172 0.721011 0.753381 0.679653 0.612172 0.673054 0.990111 0.823518 0.686714 0.774022 0.989781 0.178442 0.896295 0.006189942 0.995745 0.006189942 0.796846 0.995298 0.6502 0.963847 0.796077 0.909397 0.656584 0.790692 0.987868 0.8408 0.811449 0.879014 0.973637 0.672444 0.989785 0.823092 0.686017 0.773535 0.989455 0.178442 0.896295 0.006189942 0.995745 0.006189942 0.796846 0.873303 0.97153 0.844989 0.807324 0.786458 0.993003 0.994247 0.649793 0.963555 0.795975 0.908424 0.657152 0.672444 0.989785 0.823092 0.686017 0.773535 0.989455 0.177981 0.896187 0.005938947 0.995515 0.005938947 0.796859 0.762016 0.612771 0.720896 0.753418 0.679311 0.611599 0.791349 0.987944 0.841435 0.811735 0.879563 0.973731 0.673054 0.990111 0.823518 0.686714 0.774022 0.989781 0.1779749 0.896448 0.005722999 0.995898 0.005722999 0.796999 0.995646 0.65039 0.964195 0.796267 0.909745 0.656774 0.790082 0.988371 0.84019 0.811952 0.878404 0.97414 0.996938 0.357895 0.8453 0.66117 0.895846 0.357895 0.177514 0.89634 0.005471944 0.995668 0.005471944 0.797012 0.76161 0.611961 0.720489 0.752607 0.678905 0.610789 0.790739 0.988447 0.840825 0.812238 0.878953 0.974233 0.996329 0.357567 0.844876 0.660472 0.895361 0.357567 0.1779749 0.896448 0.005722999 0.995898 0.005722999 0.796999 0.874061 0.971754 0.845747 0.807548 0.787216 0.993228 0.994597 0.649979 0.963905 0.79616 0.908774 0.657338 0.996938 0.357895 0.8453 0.66117 0.895846 0.357895 0.177514 0.89634 0.005471944 0.995668 0.005471944 0.797012 0.873994 0.971956 0.845676 0.80796 0.787254 0.993403 0.761947 0.611368 0.720588 0.752576 0.67923 0.611368 0.996329 0.357567 0.844876 0.660472 0.895361 0.357567</float_array>
+          <technique_common>
+            <accessor source="#dropitem-mesh-map-0-array" count="132" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="dropitem-mesh-vertices">
+          <input semantic="POSITION" source="#dropitem-mesh-positions"/>
+        </vertices>
+        <polylist material="dropitem_rainbow-material" count="44">
+          <input semantic="VERTEX" source="#dropitem-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#dropitem-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#dropitem-mesh-map-0" offset="2" set="0"/>
+          <vcount>3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 </vcount>
+          <p>0 0 0 1 0 1 2 0 2 3 0 3 0 0 4 2 0 5 4 1 6 5 1 7 6 1 8 7 1 9 4 1 10 6 1 11 8 2 12 9 2 13 10 2 14 11 2 15 8 2 16 10 2 17 12 3 18 13 3 19 14 3 20 15 3 21 12 3 22 14 3 23 16 4 24 17 4 25 18 4 26 19 4 27 16 4 28 18 4 29 20 5 30 21 5 31 22 5 32 23 5 33 20 5 34 22 5 35 24 6 36 25 6 37 26 6 38 27 7 39 28 7 40 29 7 41 30 8 42 31 8 43 32 8 44 33 9 45 34 9 46 35 9 47 36 10 48 37 10 49 38 10 50 39 11 51 40 11 52 41 11 53 42 12 54 43 12 55 44 12 56 45 13 57 46 13 58 47 13 59 48 14 60 49 14 61 50 14 62 51 15 63 52 15 64 53 15 65 54 16 66 55 16 67 56 16 68 57 17 69 58 17 70 59 17 71 60 18 72 61 18 73 62 18 74 63 19 75 64 19 76 65 19 77 66 20 78 67 20 79 68 20 80 69 21 81 70 21 82 71 21 83 72 22 84 73 22 85 74 22 86 75 23 87 76 23 88 77 23 89 78 24 90 79 24 91 80 24 92 81 25 93 82 25 94 83 25 95 84 26 96 85 26 97 86 26 98 87 27 99 88 27 100 89 27 101 90 28 102 91 28 103 92 28 104 93 29 105 94 29 106 95 29 107 96 30 108 97 30 109 98 30 110 99 31 111 100 31 112 101 31 113 102 32 114 103 32 115 104 32 116 105 33 117 106 33 118 107 33 119 108 34 120 109 34 121 110 34 122 111 35 123 112 35 124 113 35 125 114 36 126 115 36 127 116 36 128 117 37 129 118 37 130 119 37 131</p>
+        </polylist>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_controllers>
+    <controller id="Armature_dropitem-skin" name="Armature">
+      <skin source="#dropitem-mesh">
+        <bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+        <source id="Armature_dropitem-skin-joints">
+          <Name_array id="Armature_dropitem-skin-joints-array" count="3">dropitem_rainbow Effect_Cube dropitem</Name_array>
+          <technique_common>
+            <accessor source="#Armature_dropitem-skin-joints-array" count="3" stride="1">
+              <param name="JOINT" type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Armature_dropitem-skin-bind_poses">
+          <float_array id="Armature_dropitem-skin-bind_poses-array" count="48">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0.7071068 0 -0.7071068 0 0 1 0 -0.256 0.7071068 0 0.7071068 0 0 0 0 1 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#Armature_dropitem-skin-bind_poses-array" count="3" stride="16">
+              <param name="TRANSFORM" type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Armature_dropitem-skin-weights">
+          <float_array id="Armature_dropitem-skin-weights-array" count="120">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#Armature_dropitem-skin-weights-array" count="120" stride="1">
+              <param name="WEIGHT" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <joints>
+          <input semantic="JOINT" source="#Armature_dropitem-skin-joints"/>
+          <input semantic="INV_BIND_MATRIX" source="#Armature_dropitem-skin-bind_poses"/>
+        </joints>
+        <vertex_weights count="120">
+          <input semantic="JOINT" source="#Armature_dropitem-skin-joints" offset="0"/>
+          <input semantic="WEIGHT" source="#Armature_dropitem-skin-weights" offset="1"/>
+          <vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 </vcount>
+          <v>2 0 2 1 2 2 2 3 2 4 2 5 2 6 2 7 2 8 2 9 2 10 2 11 2 12 2 13 2 14 2 15 2 16 2 17 2 18 2 19 2 20 2 21 2 22 2 23 2 24 2 25 2 26 2 27 2 28 2 29 2 30 2 31 2 32 2 33 2 34 2 35 2 36 2 37 2 38 2 39 2 40 2 41 2 42 2 43 2 44 2 45 2 46 2 47 2 48 2 49 2 50 2 51 2 52 2 53 2 54 2 55 2 56 2 57 2 58 2 59 2 60 2 61 2 62 2 63 2 64 2 65 2 66 2 67 2 68 2 69 2 70 2 71 2 72 2 73 2 74 2 75 2 76 2 77 2 78 2 79 2 80 2 81 2 82 2 83 2 84 2 85 2 86 2 87 2 88 2 89 2 90 2 91 2 92 2 93 2 94 2 95 2 96 2 97 2 98 2 99 2 100 2 101 2 102 2 103 2 104 2 105 2 106 2 107 2 108 2 109 2 110 2 111 2 112 2 113 2 114 2 115 2 116 2 117 2 118 2 119</v>
+        </vertex_weights>
+      </skin>
+    </controller>
+  </library_controllers>
+  <library_visual_scenes>
+    <visual_scene id="Default" name="Default">
+      <node id="Armature" name="Armature" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <node id="dropitem_rainbow" name="dropitem_rainbow" sid="dropitem_rainbow" type="JOINT">
+          <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+          <node id="dropitem" name="dropitem" sid="dropitem" type="JOINT">
+            <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+            <node id="Effect_Cube" name="Effect_Cube" sid="Effect_Cube" type="JOINT">
+              <matrix sid="transform">0.7071068 0 0.7071068 0 0 1 0 0.256 -0.7071068 0 0.7071068 0 0 0 0 1</matrix>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node id="dropitem" name="dropitem" type="NODE">
+        <translate sid="location">0 0 0</translate>
+        <rotate sid="rotationZ">0 0 1 0</rotate>
+        <rotate sid="rotationY">0 1 0 0</rotate>
+        <rotate sid="rotationX">1 0 0 0</rotate>
+        <scale sid="scale">1 1 1</scale>
+        <instance_controller url="#Armature_dropitem-skin">
+          <skeleton>#dropitem_rainbow</skeleton>
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="dropitem_rainbow-material" target="#dropitem_rainbow-material">
+                <bind_vertex_input semantic="GeometrySource2" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_controller>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Default"/>
+  </scene>
+</COLLADA>

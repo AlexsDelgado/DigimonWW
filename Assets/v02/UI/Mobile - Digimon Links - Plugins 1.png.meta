@@ -1,0 +1,739 @@
+fileFormatVersion: 2
+guid: 9ce5b5ee38a638042a343718ffee4b7d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Mobile - Digimon Links - Plugins 1_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 635
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25f58d59ddadb354da0267f3acce790c
+      internalID: 240349348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Digimon Links - Plugins 1_1
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 635
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88d44c3c4cb022343a94efb343a96f6c
+      internalID: -1327901273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Digimon Links - Plugins 1_2
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 635
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9936567149f70eb418aab559145faa0c
+      internalID: 1339024301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Digimon Links - Plugins 1_3
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 635
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 015d92663defb6942a1b353f6cacc908
+      internalID: -239941881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Digimon Links - Plugins 1_4
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 530
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2425440241bfb7c44966cf630b81a56b
+      internalID: -1667875766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Digimon Links - Plugins 1_5
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 530
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e105e60ab0897e141acb3b6f9523f43a
+      internalID: -269139407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Digimon Links - Plugins 1_6
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 530
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f4114b51c0078d40861fc70f616d64c
+      internalID: 1995955446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Digimon Links - Plugins 1_7
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 530
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4202011c2cb2334a9a0bb8fb1798455
+      internalID: 1614539838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Digimon Links - Plugins 1_8
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 425
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0f0b42c001891f449bd1ec6742dd806
+      internalID: 1827986890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Digimon Links - Plugins 1_9
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 425
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0d3f51fa3b68854584adbe843357411
+      internalID: 1594321278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Digimon Links - Plugins 1_10
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 425
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56d0d789a0e59404980d143fd7ffd8bd
+      internalID: -371218925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Digimon Links - Plugins 1_11
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 425
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 031bb7f7b7570a145bf5cbc850c5fed2
+      internalID: 1394395255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Digimon Links - Plugins 1_12
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 320
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9b607b08a3813a479c4e36c0bd2455d
+      internalID: 1733362354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Digimon Links - Plugins 1_13
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 320
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a6efd40c4934354495f5b53e755b292
+      internalID: 499524802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Digimon Links - Plugins 1_14
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 320
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c477a9e7dfc48347b7588ddf4949252
+      internalID: 1625831840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Digimon Links - Plugins 1_15
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 320
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14261d1382da6394bb06699212cc5609
+      internalID: -558740237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Digimon Links - Plugins 1_16
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 215
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ead9a73ec5d263a46b8de998c1175d24
+      internalID: 2032050488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Digimon Links - Plugins 1_17
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 215
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b220ec0d4adf87b40a90b1db30b40209
+      internalID: -1816817312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Digimon Links - Plugins 1_18
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 215
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ca00c8ab0ce1c74ab06a38c29f72669
+      internalID: -219469314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Digimon Links - Plugins 1_19
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 215
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08b9799db52dd7e48a5c915d72cebe25
+      internalID: -1849730964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Digimon Links - Plugins 1_20
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 110
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83d29ee356efca641b0882a1888675d3
+      internalID: 413599232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Digimon Links - Plugins 1_21
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 110
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c67c05bc28cdda428523163c109d849
+      internalID: -1765427934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Digimon Links - Plugins 1_22
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 110
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27c3b22828799fc46a95b80de966de8a
+      internalID: 894195240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Digimon Links - Plugins 1_23
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 110
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25bde8af7e78aa44f92ef2896078479f
+      internalID: -969534984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Digimon Links - Plugins 1_24
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 5
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f04e6572e17300d48b86b7a38e1f32fe
+      internalID: -1413071387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Digimon Links - Plugins 1_25
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 5
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 000688b44108c11408a6da924c5e03e6
+      internalID: -329500560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Digimon Links - Plugins 1_26
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 5
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b4155f64193f294d85b055cb085f43c
+      internalID: -1460249496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Digimon Links - Plugins 1_27
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 5
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 177da46a0eb7b6740a8bb0e733cb6900
+      internalID: -698263050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 7aaedcedd408de54d9cec2564be60fe7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Mobile - Digimon Links - Plugins 1_0: 240349348
+      Mobile - Digimon Links - Plugins 1_1: -1327901273
+      Mobile - Digimon Links - Plugins 1_10: -371218925
+      Mobile - Digimon Links - Plugins 1_11: 1394395255
+      Mobile - Digimon Links - Plugins 1_12: 1733362354
+      Mobile - Digimon Links - Plugins 1_13: 499524802
+      Mobile - Digimon Links - Plugins 1_14: 1625831840
+      Mobile - Digimon Links - Plugins 1_15: -558740237
+      Mobile - Digimon Links - Plugins 1_16: 2032050488
+      Mobile - Digimon Links - Plugins 1_17: -1816817312
+      Mobile - Digimon Links - Plugins 1_18: -219469314
+      Mobile - Digimon Links - Plugins 1_19: -1849730964
+      Mobile - Digimon Links - Plugins 1_2: 1339024301
+      Mobile - Digimon Links - Plugins 1_20: 413599232
+      Mobile - Digimon Links - Plugins 1_21: -1765427934
+      Mobile - Digimon Links - Plugins 1_22: 894195240
+      Mobile - Digimon Links - Plugins 1_23: -969534984
+      Mobile - Digimon Links - Plugins 1_24: -1413071387
+      Mobile - Digimon Links - Plugins 1_25: -329500560
+      Mobile - Digimon Links - Plugins 1_26: -1460249496
+      Mobile - Digimon Links - Plugins 1_27: -698263050
+      Mobile - Digimon Links - Plugins 1_3: -239941881
+      Mobile - Digimon Links - Plugins 1_4: -1667875766
+      Mobile - Digimon Links - Plugins 1_5: -269139407
+      Mobile - Digimon Links - Plugins 1_6: 1995955446
+      Mobile - Digimon Links - Plugins 1_7: 1614539838
+      Mobile - Digimon Links - Plugins 1_8: 1827986890
+      Mobile - Digimon Links - Plugins 1_9: 1594321278
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
