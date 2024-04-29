@@ -17,7 +17,6 @@ MonoBehaviour:
   unitLevel: 1
   baseDamage: 10
   baseDef: 5
-  baseMaxHp: 100
-  damage: 10
-  defense: 5
-  maxHp: 100
+  baseMaxHp: 30
+  wisdom: 5
+  reward: 5

@@ -9,10 +9,22 @@ public class Unit : MonoBehaviour
     public int unitLevel;
 
     public int damage;
-
+    public int defense;
     public int maxHP;
+    
     public int currentHP;
 
+    public void setUnit(UnitData unitData)
+    {
+        unitName = unitData.unitName;
+        unitLevel = unitData.unitLevel;
+        
+        
+        //subir stats digimon
+        defense = unitData.baseDef * unitLevel;
+        currentHP = unitData.baseMaxHp * unitLevel;
+        damage = unitData.baseDamage * unitLevel;
+    }
     public bool TakeDamage(int dmg)
     {
         this.GetComponent<Animator>().SetTrigger("Dmg");

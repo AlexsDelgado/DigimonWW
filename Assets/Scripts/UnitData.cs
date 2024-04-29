@@ -3,16 +3,14 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "UnitData",menuName = "Unit Data")]
 public class UnitData : ScriptableObject
 {
-    public bool isPlayer;
-    public string unitName;
-    public int unitLevel;
+    public bool isPlayer = false;
+    public string unitName = "defaultValue";
+    public int unitLevel=1;
 
-    public int baseDamage;
-    public int baseDef;
-    public int baseMaxHp;
+    public int baseDamage = 1;
+    public int baseDef = 5;
+    public int baseMaxHp = 30;
 
-    public int damage;
-    public int defense;
-    public int maxHp;
-    
+    public int wisdom = 5;
+    public int reward = 5;
 }

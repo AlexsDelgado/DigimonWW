@@ -1208,7 +1208,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &272915046
 GameObject:
@@ -1245,7 +1245,7 @@ RectTransform:
   - {fileID: 241482757}
   - {fileID: 1358669501}
   m_Father: {fileID: 578796956}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -1295,7 +1295,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 272915049}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 578796959}
+        m_TargetAssemblyTypeName: PluginShop, Assembly-CSharp
+        m_MethodName: pluginWsd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &272915049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1779,9 +1791,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 886953591}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: SetEnemyColosseum
+      - m_Target: {fileID: 549828220}
+        m_TargetAssemblyTypeName: ColoMenu, Assembly-CSharp
+        m_MethodName: ComenzarPelea
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 693677408304948039, guid: 11b76c4af9b612d47bfa99513801c168,
@@ -2492,7 +2504,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 7a92fdeab476a56419e09d12d4d10e54,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7a92fdeab476a56419e09d12d4d10e54,
         type: 3}
@@ -2966,7 +2978,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 8c53b9184c6b2374b926f1aebb6e6938,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8c53b9184c6b2374b926f1aebb6e6938,
         type: 3}
@@ -3300,6 +3312,7 @@ GameObject:
   - component: {fileID: 547198971}
   - component: {fileID: 547198973}
   - component: {fileID: 547198972}
+  - component: {fileID: 547198974}
   m_Layer: 5
   m_Name: GymMenu
   m_TagString: Untagged
@@ -3372,6 +3385,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 547198970}
   m_CullTransparentMesh: 1
+--- !u!114 &547198974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547198970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55ef32124f735134da1d72bee19f5045, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiExp: {fileID: 599913528}
+  uiCost:
+  - {fileID: 869345717}
+  - {fileID: 1657948033}
+  - {fileID: 912416877}
 --- !u!1 &549828216
 GameObject:
   m_ObjectHideFlags: 0
@@ -3383,13 +3413,14 @@ GameObject:
   - component: {fileID: 549828217}
   - component: {fileID: 549828219}
   - component: {fileID: 549828218}
+  - component: {fileID: 549828220}
   m_Layer: 5
   m_Name: ColoMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &549828217
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3455,6 +3486,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 549828216}
   m_CullTransparentMesh: 1
+--- !u!114 &549828220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 549828216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e6ae08b6fa711408c00e61be9ce2be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &577210599
 GameObject:
   m_ObjectHideFlags: 0
@@ -3543,6 +3586,7 @@ GameObject:
   - component: {fileID: 578796956}
   - component: {fileID: 578796958}
   - component: {fileID: 578796957}
+  - component: {fileID: 578796959}
   m_Layer: 5
   m_Name: ShopMenu
   m_TagString: Untagged
@@ -3568,8 +3612,8 @@ RectTransform:
   - {fileID: 1331009366}
   - {fileID: 1886434338}
   - {fileID: 1018436177}
-  - {fileID: 1283544039}
   - {fileID: 272915047}
+  - {fileID: 1283544039}
   m_Father: {fileID: 1255440931}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3616,6 +3660,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 578796955}
   m_CullTransparentMesh: 1
+--- !u!114 &578796959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578796955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8141c8800e0870548af6fa3b11e120cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiGold: {fileID: 1894587316}
+  uiCost:
+  - {fileID: 1873351332}
+  - {fileID: 421209489}
+  - {fileID: 719756292}
+  - {fileID: 912665935}
 --- !u!1 &599913526
 GameObject:
   m_ObjectHideFlags: 0
@@ -3979,7 +4041,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 4d0221da6ac3df74491da7105077c43b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4d0221da6ac3df74491da7105077c43b,
         type: 3}
@@ -4690,7 +4752,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 723344279}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 547198974}
+        m_TargetAssemblyTypeName: GymManager, Assembly-CSharp
+        m_MethodName: trainWsd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &723344279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5331,9 +5405,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 886953591}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: SetEnemyColosseum
+      - m_Target: {fileID: 549828220}
+        m_TargetAssemblyTypeName: ColoMenu, Assembly-CSharp
+        m_MethodName: ComenzarPelea
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 3167453150367865226, guid: 5f3cfbe1741712547ad443099e23e9c4,
@@ -5837,7 +5911,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!114 &835702916
 MonoBehaviour:
@@ -6018,7 +6092,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 839918128}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 547198974}
+        m_TargetAssemblyTypeName: GymManager, Assembly-CSharp
+        m_MethodName: trainHP
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &839918128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6204,7 +6290,7 @@ GameObject:
   - component: {fileID: 886953591}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6221,10 +6307,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b360abcc494ea6241848caf17789ed0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerDigimon: {fileID: 1139588188102959484, guid: 6777660da182bc746bbd8d90c06e2a2d,
+  PlayerPF: {fileID: 1139588188102959484, guid: 6777660da182bc746bbd8d90c06e2a2d,
     type: 3}
-  SceneInfo: {fileID: 11400000, guid: eda938d831b313342aa277ccd7f54c05, type: 2}
-  Tapirmon: {fileID: 11400000, guid: e6d7d45f725bf51419d9febd199afbe7, type: 2}
+  playerDigimon: {fileID: 11400000, guid: ba88432989a3d1645af4e14286fcb885, type: 2}
+  enemyPrefab: {fileID: 0}
+  unitSO: {fileID: 0}
+  EXP: 0
+  Gold: 0
+  costTrainning: 0
+  costPlugin: 0
+  enemySO: []
 --- !u!4 &886953592
 Transform:
   m_ObjectHideFlags: 0
@@ -6238,7 +6330,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &892903674
 GameObject:
@@ -6522,7 +6614,7 @@ GameObject:
   - component: {fileID: 912665936}
   - component: {fileID: 912665935}
   m_Layer: 5
-  m_Name: Cantidad
+  m_Name: DV
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7532,7 +7624,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1018436179}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 578796959}
+        m_TargetAssemblyTypeName: PluginShop, Assembly-CSharp
+        m_MethodName: pluginDMG
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1018436179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8575,7 +8679,7 @@ RectTransform:
   - {fileID: 547198971}
   - {fileID: 1947322396}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -8829,7 +8933,7 @@ RectTransform:
   - {fileID: 834007400}
   - {fileID: 693035511}
   m_Father: {fileID: 578796956}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -8879,7 +8983,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1283544041}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 578796959}
+        m_TargetAssemblyTypeName: PluginShop, Assembly-CSharp
+        m_MethodName: pluginDV
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1283544041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9858,7 +9974,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 96f0e4cd2455b224a98a0ad0a8591b08,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 96f0e4cd2455b224a98a0ad0a8591b08,
         type: 3}
@@ -10137,7 +10253,7 @@ Transform:
   - {fileID: 250559468}
   - {fileID: 740035360}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1523713898
 GameObject:
@@ -10510,9 +10626,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 886953591}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: SetEnemyColosseum
+      - m_Target: {fileID: 549828220}
+        m_TargetAssemblyTypeName: ColoMenu, Assembly-CSharp
+        m_MethodName: ComenzarPelea
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1857166597278909062, guid: b3cd31126ee101b4c8956d60759b5c48,
@@ -12163,7 +12279,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 057716e847565f14fba706bc564fc9f4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 057716e847565f14fba706bc564fc9f4,
         type: 3}
@@ -12552,7 +12668,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1886434340}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 578796959}
+        m_TargetAssemblyTypeName: PluginShop, Assembly-CSharp
+        m_MethodName: pluginHP
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1886434340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12962,7 +13090,7 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 5231688638061602360}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1947322397
+--- !u!114 &1947322399
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12971,12 +13099,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1947322395}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b360abcc494ea6241848caf17789ed0e, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b2926310807c6342946eb5dfb7386e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerDigimon: {fileID: 0}
-  SceneInfo: {fileID: 0}
-  Tapirmon: {fileID: 0}
 --- !u!1 &1952915262
 GameObject:
   m_ObjectHideFlags: 0
@@ -13076,12 +13201,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 886953591}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: SetEnemyColosseum
+      - m_Target: {fileID: 549828220}
+        m_TargetAssemblyTypeName: ColoMenu, Assembly-CSharp
+        m_MethodName: ComenzarPelea
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 3167453150367865226, guid: 5f3cfbe1741712547ad443099e23e9c4,
+          m_ObjectArgument: {fileID: 3597322642795185274, guid: 3cb98f9b58a9a734c8025f4dcd665b6d,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -13432,7 +13557,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1977214602}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 547198974}
+        m_TargetAssemblyTypeName: GymManager, Assembly-CSharp
+        m_MethodName: trainDmg
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1977214602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13516,7 +13653,7 @@ Transform:
   - {fileID: 1157241194}
   - {fileID: 1774581588}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2052081634 stripped
 Transform:
@@ -13692,7 +13829,7 @@ Transform:
   - {fileID: 1020557228}
   - {fileID: 187433022}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2077387864
 GameObject:
@@ -14384,7 +14521,7 @@ Transform:
   - {fileID: 5862561658881082100}
   - {fileID: 8566188345899505145}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &1806200088096841935
 SkinnedMeshRenderer:
@@ -14489,7 +14626,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1537232851758777192}
   m_Layer: 0
-  m_Name: farm_01 (1)
+  m_Name: Isla
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

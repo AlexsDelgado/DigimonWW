@@ -258,7 +258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 0
-  unitName: Gabugod
+  unitName: GabuSO
   unitLevel: 1
   damage: 15
   maxHP: 150

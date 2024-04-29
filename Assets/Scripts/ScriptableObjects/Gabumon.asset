@@ -14,10 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   unitName: Gabugod
-  unitLevel: 1
-  baseDamage: 15
-  baseDef: 15
-  baseMaxHp: 50
-  damage: 15
-  defense: 15
-  maxHp: 50
+  unitLevel: 3
+  baseDamage: 10
+  baseDef: 20
+  baseMaxHp: 30
+  wisdom: 5
+  reward: 20

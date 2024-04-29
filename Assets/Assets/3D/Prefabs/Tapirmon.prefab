@@ -212,7 +212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 0
-  unitName: Tapirmon
+  unitName: TapirSO
   unitLevel: 1
   damage: 10
   maxHP: 50

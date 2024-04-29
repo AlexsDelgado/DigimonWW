@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f820448ddcdd3904b9a6033ee72537e2, type: 3}
-  m_Name: Agumon
+  m_Name: Bearmon (player)
   m_EditorClassIdentifier: 
-  isPlayer: 0
-  unitName: Agumoncin
-  unitLevel: 2
+  isPlayer: 1
+  unitName: Jugador
+  unitLevel: 1
   baseDamage: 12
-  baseDef: 15
-  baseMaxHp: 30
-  wisdom: 5
-  reward: 10
+  baseDef: 10
+  baseMaxHp: 100
+  damage: 12
+  defense: 10
+  maxHp: 100

@@ -6,11 +6,7 @@ using UnityEngine;
 public class Bearmon : MonoBehaviour
 {
     public Animator animaciones;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] public UnitData unitData;
 
     public void Animation(String animation)
     {

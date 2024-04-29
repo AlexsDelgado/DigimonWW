@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f820448ddcdd3904b9a6033ee72537e2, type: 3}
-  m_Name: Agumon
+  m_Name: Kuwagamon
   m_EditorClassIdentifier: 
   isPlayer: 0
-  unitName: Agumoncin
-  unitLevel: 2
-  baseDamage: 12
-  baseDef: 15
-  baseMaxHp: 30
+  unitName: KuwaSO
+  unitLevel: 5
+  baseDamage: 30
+  baseDef: 30
+  baseMaxHp: 80
   wisdom: 5
-  reward: 10
+  reward: 50
