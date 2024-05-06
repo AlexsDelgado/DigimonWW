@@ -1,8 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Observer;
 using TMPro;
+using TypeObject;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public enum BattleSate {START, PLAYER, ENEMY, WIN, LOSE}
@@ -40,9 +43,26 @@ public class CombatManager : MonoBehaviour
     [SerializeField] public GameObject EvolutionPf;
     private bool accion = true;
 
+    [SerializeField] public Enemy typeEnemy;
+    [SerializeField] private AudioClip musicBoss;
+    [SerializeField] private AudioClip musicColo;
+    [SerializeField] private AudioClip Win;
+    [SerializeField] private AudioClip Lose;
+    [SerializeField] private AudioClip attack;
+    [SerializeField] private AudioClip attackPlayer;
+    [SerializeField] private AudioClip attackBoss;
+    
+    
+    //eventos para UI y Audoi
+
+    public event Action<int> updateHPEnemy;
+    public event Action<int> updateHPPlayer;
+    public event Action<AudioClip> music;
+    public event Action<AudioClip> sfx;
+    
     private void Start()
     {
-
+        AudioManager.Instance.StartCombat();
         state = BattleSate.START;
         enemyData = GameManager.Instance.unitSO;
         playerData = GameManager.Instance.playerDigimon;
@@ -53,9 +73,21 @@ public class CombatManager : MonoBehaviour
     {
         playerGameObject = Instantiate(playerPF, playerPosition);
         playerUnit = playerGameObject.GetComponent<Unit>();
+        
 
         enemyGameObject = Instantiate(GameManager.Instance.enemyPrefab, enemyPosition);
         enemyUnit = enemyGameObject.GetComponent<Unit>();
+        typeEnemy = enemyGameObject.GetComponent<BossEnemy>();
+        if (typeEnemy is BossEnemy)
+        {
+            //es el boss final musica epica
+            music(musicBoss);
+        }
+        else
+        {
+            // musica coliseo
+            music(musicColo);
+        }
 
         enemyUnit.setUnit(enemyData);
         playerUnit.setUnit(playerData);
@@ -78,15 +110,20 @@ public class CombatManager : MonoBehaviour
     {
         playerGameObject.transform.position = attackPosition.position;
         playerGameObject.GetComponent<Animator>().Play("attack1");
+        sfx(attackPlayer);
         bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
 
-
-        UI_instance.SetEnemyHP(enemyUnit.currentHP);
+        updateHPEnemy(enemyUnit.currentHP);
+        //UI_instance.SetEnemyHP(enemyUnit.currentHP);
         texto.text = playerUnit.unitName + " ataca a " + enemyUnit.unitName;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         playerGameObject.transform.position = playerPosition.position;
         if (isDead)
         {
+            if (typeEnemy is BossEnemy)
+            { 
+                SceneManager.LoadScene("EndGame");//end game
+            }
             state = BattleSate.WIN;
             StartCoroutine(EndBattle());
         }
@@ -101,12 +138,23 @@ public class CombatManager : MonoBehaviour
     IEnumerator EnemyTurn()
     {
         texto.text = enemyUnit.unitName + " ataca a " + playerUnit.unitName;
+        
         enemyGameObject.GetComponent<Animator>().SetTrigger("Attack");
-        yield return new WaitForSeconds(2f);
+    
+        yield return new WaitForSeconds(1f);
+        if (typeEnemy is BossEnemy)
+        {
+            sfx(attackBoss); 
+        }
+        else
+        {
+            sfx(attack);
+        }
 
         bool isDead = playerUnit.TakeDamage(enemyUnit.damage);
         playerGameObject.GetComponent<Animator>().SetTrigger("Dmg");
-        UI_instance.SetPlayerHP(playerUnit.currentHP);
+        //UI_instance.SetPlayerHP(playerUnit.currentHP);
+        updateHPPlayer(playerUnit.currentHP);
         yield return new WaitForSeconds(1f);
         if (isDead)
         {
@@ -127,6 +175,7 @@ public class CombatManager : MonoBehaviour
             playerGameObject.GetComponent<Animator>().SetTrigger("Win");
             enemyGameObject.GetComponent<Animator>().SetTrigger("Lose");
             texto.text = "Ganaste";
+            sfx(Win);
             GameManager.Instance.EXP += enemyData.reward;
             GameManager.Instance.Gold += enemyData.reward;
             Debug.Log("exp :" + GameManager.Instance.EXP);
@@ -140,6 +189,7 @@ public class CombatManager : MonoBehaviour
             playerGameObject.GetComponent<Animator>().SetTrigger("Lose");
             enemyGameObject.GetComponent<Animator>().SetTrigger("Win");
             texto.text = "Perdiste";
+            sfx(Lose);
             yield return new WaitForSeconds(2f);
             GameManager.Instance.returnMainIsland(false);
         }

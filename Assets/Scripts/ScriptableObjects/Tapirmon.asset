@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Tapirmon
   m_EditorClassIdentifier: 
   isPlayer: 0
-  unitName: TapirmonSO
+  unitName: Tapirmon
   unitLevel: 1
   baseDamage: 10
   baseDef: 5

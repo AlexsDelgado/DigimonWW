@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class GymManager : MonoBehaviour
+public class GymManager : MonoBehaviour, ICurrency
 {
     
     public TextMeshProUGUI uiExp;
     public TextMeshProUGUI[] uiCost;
-
     private int precio;
-    // Start is called before the first frame update
+    public int Exp;
+
     void Start()
     {
         uiExp.text = GameManager.Instance.EXP.ToString();
@@ -20,6 +20,7 @@ public class GymManager : MonoBehaviour
             i.text = precio.ToString();
             Debug.Log("cuesta esto entrenar: " + i.text);
         }
+        
     }
     //evento de que se gasto puntos de exp
     //evento post batalla para recibir exp y actualizar ui
@@ -36,13 +37,103 @@ public class GymManager : MonoBehaviour
       
     }
 
-    public void trainHP()
+ 
+    // public void trainHP()
+    // {
+    //     if (GameManager.Instance.EXP>=GameManager.Instance.costTrainning)
+    //     {
+    //         GameManager.Instance.playerDigimon.baseMaxHp += GameManager.Instance.costTrainning;
+    //         Debug.Log("HP actual de bearmon :" + GameManager.Instance.playerDigimon.baseMaxHp);
+    //         updateExp();
+    //     }
+    //     else
+    //     {
+    //         Debug.Log("Tu digimon no tiene suficiente experiencia");
+    //     }
+    // }
+
+    // public void trainDmg()
+    // {
+    //     if (GameManager.Instance.EXP>=GameManager.Instance.costTrainning)
+    //     {
+    //         GameManager.Instance.playerDigimon.baseDamage += GameManager.Instance.costTrainning;
+    //         Debug.Log("ataque actual de bearmon :" + GameManager.Instance.playerDigimon.baseDamage);
+    //         updateExp();
+    //     }
+    //     else
+    //     {
+    //         Debug.Log("Tu digimon no tiene suficiente experiencia");
+    //     }
+    // }
+
+    // public void trainWsd()
+    // {
+    //     if (GameManager.Instance.EXP>=GameManager.Instance.costTrainning)
+    //     {
+    //         GameManager.Instance.playerDigimon.wisdom += GameManager.Instance.costTrainning;
+    //         Debug.Log("Curacion acutal de bearmon :" + GameManager.Instance.playerDigimon.wisdom);
+    //         updateExp();
+    //     }
+    //     else
+    //     {
+    //         Debug.Log("Tu digimon no tiene suficiente experiencia");
+    //     }
+    // }
+
+    public void UseCurrency(string stat)
     {
-        if (GameManager.Instance.EXP>=GameManager.Instance.costTrainning)
+       
+        switch (stat)
         {
-            GameManager.Instance.playerDigimon.baseMaxHp += GameManager.Instance.costTrainning;
+            case "HP":
+                TrainHP();
+                break;
+            case "AT":
+                TrainDMG();
+                break;
+            case "WSD":
+                TrainWSD();
+                break;
+            default:
+                Debug.Log("Invalid Command");
+                break;
+        }
+        SetCurrencyUI();
+        //event que actualiza stats
+        
+    }
+
+    public void GetCurrency()
+    {
+        Exp = GameManager.Instance.EXP;
+        precio = GameManager.Instance.costTrainning; 
+    }
+
+    public void SetCurrencyUI()
+    {
+        uiExp.text = GameManager.Instance.EXP.ToString();
+        precio = GameManager.Instance.costTrainning;
+        foreach (var i in uiCost)
+        {
+            i.text = precio.ToString();
+            Debug.Log("cuesta esto entrenar: " + i.text);
+        }
+        uiExp.text = Exp.ToString();
+        foreach (var i in uiCost)
+        {
+            i.text = precio.ToString();
+            Debug.Log("cuesta esto entrenar: " + i.text);
+        }
+    }
+
+    public void TrainHP()
+    {
+         GetCurrency();
+        if (Exp>=precio)
+        {
+            GameManager.Instance.playerDigimon.baseMaxHp += precio;
             Debug.Log("HP actual de bearmon :" + GameManager.Instance.playerDigimon.baseMaxHp);
-            updateExp();
+            UpdateCurrency();
         }
         else
         {
@@ -50,31 +141,44 @@ public class GymManager : MonoBehaviour
         }
     }
 
-    public void trainDmg()
+    public void TrainDMG()
     {
-        if (GameManager.Instance.EXP>=GameManager.Instance.costTrainning)
+        GetCurrency();
+        if (Exp>=precio)
         {
-            GameManager.Instance.playerDigimon.baseDamage += GameManager.Instance.costTrainning;
-            Debug.Log("ataque actual de bearmon :" + GameManager.Instance.playerDigimon.baseDamage);
-            updateExp();
+            GameManager.Instance.playerDigimon.baseDamage += precio;
+            Debug.Log("HP actual de bearmon :" + GameManager.Instance.playerDigimon.baseDamage);
+            UpdateCurrency();
         }
         else
         {
-            Debug.Log("Tu digimon no tiene suficiente experiencia");
+            Debug.Log("Tu digimon no puede hacer eso");
         }
     }
 
-    public void trainWsd()
+    public void TrainWSD()
     {
-        if (GameManager.Instance.EXP>=GameManager.Instance.costTrainning)
+        GetCurrency();
+        if (Exp>=precio)
         {
-            GameManager.Instance.playerDigimon.wisdom += GameManager.Instance.costTrainning;
-            Debug.Log("Curacion acutal de bearmon :" + GameManager.Instance.playerDigimon.wisdom);
-            updateExp();
+            GameManager.Instance.playerDigimon.wisdom += precio;
+            Debug.Log("HP actual de bearmon :" + GameManager.Instance.playerDigimon.wisdom);
+            UpdateCurrency();
         }
         else
         {
-            Debug.Log("Tu digimon no tiene suficiente experiencia");
+            Debug.Log("Tu digimon no puede hacer eso");
         }
     }
+
+    public void UpdateCurrency()
+    {
+        //updateExp();
+        GameManager.Instance.EXP -= precio;
+        precio = GameManager.Instance.costeTrainning();
+        GetCurrency();
+        SetCurrencyUI();
+    }
+
+
 }

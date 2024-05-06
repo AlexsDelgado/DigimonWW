@@ -8,6 +8,8 @@ public class CameraController : MonoBehaviour
     [SerializeField] private GameObject coliseoMenu;
     [SerializeField] private GameObject shopMenu;
     [SerializeField] private GameObject gymMenu;
+    [SerializeField] private GameObject digimonStatus;
+    
     public Transform coliseo;
     public Transform coliseoCamara;
     public Transform shop;
@@ -53,6 +55,16 @@ public class CameraController : MonoBehaviour
         transform.position = gymCamara.position;
         transform.rotation = gymCamara.rotation;
     }
+    public void DigimonStatus()
+    {
+        CerrarMenu();
+        this.transform.position = new Vector3(0, 0, 0);
+        this.transform.position = islandCamara.position;
+        this.transform.rotation = islandCamara.rotation;
+        
+        digimonStatus.SetActive(true);
+       
+    }
 
     public void MenuExit(GameObject menu)
     {
@@ -66,6 +78,7 @@ public class CameraController : MonoBehaviour
         gymMenu.SetActive(false);
         shopMenu.SetActive(false);
         coliseoMenu.SetActive(false);
+        digimonStatus.SetActive(false);
     }
     
     

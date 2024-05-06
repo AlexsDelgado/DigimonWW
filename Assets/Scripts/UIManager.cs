@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -18,6 +19,15 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI currentHPUI;
     public TextMeshProUGUI maxHPUI;
     public GameObject buttonDV;
+
+    public CombatManager CM_manager;
+
+    private void Awake()
+    {
+        CM_manager.updateHPEnemy += SetEnemyHP;
+        CM_manager.updateHPPlayer += SetPlayerHP;
+    }
+
     public void SetHUD(Unit unit)
     {
         if (unit.isPlayer)
@@ -54,7 +64,8 @@ public class UIManager : MonoBehaviour
         buttonDV.SetActive(false);
         playerHpSlider.maxValue =newHP;
         playerHpSlider.value = newHP;
-        
+        currentHPUI.text = playerHpSlider.value.ToString();
+
     }
 
 

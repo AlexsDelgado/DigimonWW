@@ -384,6 +384,7 @@ MonoBehaviour:
   currentHPUI: {fileID: 607039931}
   maxHPUI: {fileID: 2056748636}
   buttonDV: {fileID: 2135499263}
+  CM_manager: {fileID: 1028469143}
 --- !u!1 &182315349
 GameObject:
   m_ObjectHideFlags: 0
@@ -1911,6 +1912,14 @@ MonoBehaviour:
   enemyData: {fileID: 0}
   EvolutionPf: {fileID: 6140736314273235749, guid: 36477fec950341f469aca22feb9014e9,
     type: 3}
+  typeEnemy: {fileID: 0}
+  musicBoss: {fileID: 8300000, guid: eaa9ce9530dac0945b07affff0ccc3b7, type: 3}
+  musicColo: {fileID: 8300000, guid: 38bba9b1fd044ae4ca8e4ab0c9691a41, type: 3}
+  Win: {fileID: 8300000, guid: d51d3945a37ee3b49a27256220aad638, type: 3}
+  Lose: {fileID: 8300000, guid: 9026e18f347fc534aa56b6892c7b154d, type: 3}
+  attack: {fileID: 8300000, guid: fcda8bc4e8085394a8c2ec262340ff66, type: 3}
+  attackPlayer: {fileID: 8300000, guid: 432c05716253a8b4f85032735b7abbae, type: 3}
+  attackBoss: {fileID: 8300000, guid: 7a96f5e4388db56498c5fe918013d2e6, type: 3}
 --- !u!4 &1028469144
 Transform:
   m_ObjectHideFlags: 0

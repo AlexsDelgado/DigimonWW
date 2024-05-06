@@ -14,10 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 1
   unitName: Jugador
-  unitLevel: 1
-  baseDamage: 12
-  baseDef: 10
-  baseMaxHp: 100
-  damage: 12
-  defense: 10
-  maxHp: 100
+  unitLevel: 99
+  baseDamage: 999
+  baseDef: 999
+  baseMaxHp: 999
+  wisdom: 999
+  reward: 5

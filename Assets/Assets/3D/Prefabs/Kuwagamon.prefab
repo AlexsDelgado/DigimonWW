@@ -591,8 +591,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4226506542741364416}
   - component: {fileID: 1641597846005782979}
-  - component: {fileID: 3782793043730746873}
   - component: {fileID: 5246814354162862788}
+  - component: {fileID: 6288768898244486796}
   m_Layer: 0
   m_Name: Kuwagamon
   m_TagString: Untagged
@@ -637,20 +637,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3782793043730746873
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3597322642795185274}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1acb50496ffed4f4ebe9027e39ffb826, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animaciones: {fileID: 1641597846005782979}
-  unitData: {fileID: 11400000, guid: 093216ad51b1cee4ba6ab71e0cb036a8, type: 2}
 --- !u!114 &5246814354162862788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -667,8 +653,23 @@ MonoBehaviour:
   unitName: KuwaSO
   unitLevel: 3
   damage: 60
+  defense: 0
   maxHP: 60
   currentHP: 60
+--- !u!114 &6288768898244486796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3597322642795185274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b109974ed45b442485db48f4ec2a97f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animaciones: {fileID: 1641597846005782979}
+  unitData: {fileID: 11400000, guid: 093216ad51b1cee4ba6ab71e0cb036a8, type: 2}
 --- !u!1 &4063310758478641561
 GameObject:
   m_ObjectHideFlags: 0
