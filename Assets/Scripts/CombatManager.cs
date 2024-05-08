@@ -42,6 +42,7 @@ public class CombatManager : MonoBehaviour
 
     [SerializeField] public GameObject EvolutionPf;
     private bool accion = true;
+    private bool skill = true;
 
     [SerializeField] public Enemy typeEnemy;
     [SerializeField] private AudioClip musicBoss;
@@ -102,21 +103,36 @@ public class CombatManager : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         state = BattleSate.PLAYER;
+        skill = true;
         PlayerTurn();
 
     }
 
-    IEnumerator Attack()
+    // private void ProcessCommand(ICommand comando)
+    // {
+    //     //execute
+    // }
+    
+    
+    IEnumerator SkillAttack()
     {
-        playerGameObject.transform.position = attackPosition.position;
-        playerGameObject.GetComponent<Animator>().Play("attack1");
-        sfx(attackPlayer);
-        bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
-
-        updateHPEnemy(enemyUnit.currentHP);
-        //UI_instance.SetEnemyHP(enemyUnit.currentHP);
+        var skillCommand = new SkillAttack(playerUnit.damage, enemyUnit, playerGameObject, playerGameObject.GetComponent<Animator>(), attackPosition);
+        EventQueue.Instance.QueueCommand(skillCommand);
+        //playerGameObject.transform.position = attackPosition.position;
+        //playerGameObject.GetComponent<Animator>().Play("attack1");
+       
+       
+        
+        //bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
+        enemyUnit.TakeDamage(playerUnit.damage*2);
+        
+        bool isDead = enemyUnit.isDead();
+        
         texto.text = playerUnit.unitName + " ataca a " + enemyUnit.unitName;
-        yield return new WaitForSeconds(1f);
+        sfx(attackPlayer);
+        updateHPEnemy(enemyUnit.currentHP);
+        yield return new WaitForSeconds(2f);
+  
         playerGameObject.transform.position = playerPosition.position;
         if (isDead)
         {
@@ -135,6 +151,42 @@ public class CombatManager : MonoBehaviour
 
     }
 
+    
+    IEnumerator Attack()
+    {
+        var comandoAttack = new AttackCommand(playerUnit.damage, enemyUnit, playerGameObject, playerGameObject.GetComponent<Animator>(), attackPosition);
+        EventQueue.Instance.QueueCommand(comandoAttack);
+        //playerGameObject.transform.position = attackPosition.position;
+        //playerGameObject.GetComponent<Animator>().Play("attack1");
+       
+       
+        
+        //bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
+        enemyUnit.TakeDamage(playerUnit.damage);
+        bool isDead = enemyUnit.isDead();
+        sfx(attackPlayer);
+        texto.text = playerUnit.unitName + " ataca a " + enemyUnit.unitName;
+        updateHPEnemy(enemyUnit.currentHP);
+        yield return new WaitForSeconds(2f);
+        playerGameObject.transform.position = playerPosition.position;
+        if (isDead)
+        {
+            if (typeEnemy is BossEnemy)
+            { 
+                SceneManager.LoadScene("EndGame");//end game
+            }
+            state = BattleSate.WIN;
+            StartCoroutine(EndBattle());
+        }
+        else
+        {
+            state = BattleSate.ENEMY;
+            StartCoroutine(EnemyTurn());
+        }
+
+    }
+   
+
     IEnumerator EnemyTurn()
     {
         texto.text = enemyUnit.unitName + " ataca a " + playerUnit.unitName;
@@ -151,8 +203,9 @@ public class CombatManager : MonoBehaviour
             sfx(attack);
         }
 
-        bool isDead = playerUnit.TakeDamage(enemyUnit.damage);
         playerGameObject.GetComponent<Animator>().SetTrigger("Dmg");
+        playerUnit.TakeDamage(enemyUnit.damage);
+        bool isDead = playerUnit.isDead();
         //UI_instance.SetPlayerHP(playerUnit.currentHP);
         updateHPPlayer(playerUnit.currentHP);
         yield return new WaitForSeconds(1f);
@@ -223,6 +276,17 @@ public class CombatManager : MonoBehaviour
         StartCoroutine(Attack());
     }
 
+    public void OnSkillButton()
+    {
+        if (state != BattleSate.PLAYER || accion == false|| skill==false)
+        {
+            return;
+        }
+
+        accion = false;
+        skill = false;
+        StartCoroutine(SkillAttack());
+    }
     public void OnHealButton()
     {
         if (state != BattleSate.PLAYER || accion == false)

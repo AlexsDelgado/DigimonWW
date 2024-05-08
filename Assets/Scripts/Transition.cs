@@ -17,6 +17,7 @@ public class Transition : MonoBehaviour
 
     private void Start()
     {
-        sfxTransition(transition);
+        //sfxTransition(transition);
+        AudioManager.Instance.PlaySound(transition);
     }
 }

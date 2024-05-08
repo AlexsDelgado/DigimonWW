@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Facade;
 using Observer;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -27,10 +28,8 @@ public class GameManager : MonoBehaviour
     
     //digimon level
     [SerializeField] public int ColoWins = 0;
-    
-   
-    //evento de que se gasto puntos de exp
-    //evento de que se gasto gold
+
+    public GameObject transicion;
     
     
     //singleton
@@ -82,6 +81,7 @@ public class GameManager : MonoBehaviour
             ColoWins++;
         }
         AudioManager.Instance.PlayMusicLobby();
+        //Instantiate(transicion);
     }
 
     public void SetEnemyColosseum(GameObject prefabEnemy)

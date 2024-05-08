@@ -25,10 +25,22 @@ public class Unit : MonoBehaviour
         currentHP = unitData.baseMaxHp * unitLevel;
         damage = unitData.baseDamage * unitLevel;
     }
-    public bool TakeDamage(int dmg)
+    public void TakeDamage(int dmg)
     {
         this.GetComponent<Animator>().SetTrigger("Dmg");
         currentHP -= dmg;
+        // if (currentHP <= 0)
+        // {
+        //     return true;
+        // }
+        // else
+        // {
+        //     return false;
+        // }
+    }
+
+    public bool isDead()
+    {
         if (currentHP <= 0)
         {
             return true;
