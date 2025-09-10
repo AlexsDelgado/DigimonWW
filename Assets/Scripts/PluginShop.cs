@@ -129,7 +129,7 @@ public class PluginShop : MonoBehaviour
             AudioManager.Instance.PlaySound(upgrade);
             var nuevoPlugin = new PluginFactory();
             Plugin pluginComprado = nuevoPlugin.GetPlugin(stat);
-            Debug.Log($"Se obtuvo plugin {pluginComprado.tier.ToString()}, de {pluginComprado.stat}, que aumenta un {pluginComprado.ammount} ");
+            // DEBUG_REMOVED: Debug.Log($"Se obtuvo plugin {pluginComprado.tier.ToString()}, de {pluginComprado.stat}, que aumenta un {pluginComprado.ammount} ");
             ImportPluginDigimon(pluginComprado);
         }
        

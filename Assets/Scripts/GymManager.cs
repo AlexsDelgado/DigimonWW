@@ -18,7 +18,7 @@ public class GymManager : MonoBehaviour, ICurrency
         foreach (var i in uiCost)
         {
             i.text = precio.ToString();
-            Debug.Log("cuesta esto entrenar: " + i.text);
+            // DEBUG_REMOVED: Debug.Log("cuesta esto entrenar: " + i.text);
         }
         
     }
@@ -116,13 +116,13 @@ public class GymManager : MonoBehaviour, ICurrency
         foreach (var i in uiCost)
         {
             i.text = precio.ToString();
-            Debug.Log("cuesta esto entrenar: " + i.text);
+            // DEBUG_REMOVED: Debug.Log("cuesta esto entrenar: " + i.text);
         }
         uiExp.text = Exp.ToString();
         foreach (var i in uiCost)
         {
             i.text = precio.ToString();
-            Debug.Log("cuesta esto entrenar: " + i.text);
+            // DEBUG_REMOVED: Debug.Log("cuesta esto entrenar: " + i.text);
         }
     }
 
@@ -132,12 +132,12 @@ public class GymManager : MonoBehaviour, ICurrency
         if (Exp>=precio)
         {
             GameManager.Instance.playerDigimon.baseMaxHp += precio;
-            Debug.Log("HP actual de bearmon :" + GameManager.Instance.playerDigimon.baseMaxHp);
+            // DEBUG_REMOVED: Debug.Log("HP actual de bearmon :" + GameManager.Instance.playerDigimon.baseMaxHp);
             UpdateCurrency();
         }
         else
         {
-            Debug.Log("Tu digimon no tiene suficiente experiencia");
+            // DEBUG_REMOVED: Debug.Log("Tu digimon no tiene suficiente experiencia");
         }
     }
 
@@ -147,12 +147,12 @@ public class GymManager : MonoBehaviour, ICurrency
         if (Exp>=precio)
         {
             GameManager.Instance.playerDigimon.baseDamage += precio;
-            Debug.Log("HP actual de bearmon :" + GameManager.Instance.playerDigimon.baseDamage);
+            // DEBUG_REMOVED: Debug.Log("HP actual de bearmon :" + GameManager.Instance.playerDigimon.baseDamage);
             UpdateCurrency();
         }
         else
         {
-            Debug.Log("Tu digimon no puede hacer eso");
+            // DEBUG_REMOVED: Debug.Log("Tu digimon no puede hacer eso");
         }
     }
 
@@ -162,12 +162,12 @@ public class GymManager : MonoBehaviour, ICurrency
         if (Exp>=precio)
         {
             GameManager.Instance.playerDigimon.wisdom += precio;
-            Debug.Log("HP actual de bearmon :" + GameManager.Instance.playerDigimon.wisdom);
+            // DEBUG_REMOVED: Debug.Log("HP actual de bearmon :" + GameManager.Instance.playerDigimon.wisdom);
             UpdateCurrency();
         }
         else
         {
-            Debug.Log("Tu digimon no puede hacer eso");
+            // DEBUG_REMOVED: Debug.Log("Tu digimon no puede hacer eso");
         }
     }
 

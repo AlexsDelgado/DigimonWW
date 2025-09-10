@@ -3,7 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using Facade;
 using Observer;
+using Unity.Services.Analytics;
+using Unity.Services.Core;
 using UnityEngine;
+using UnityEngine.Analytics;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -46,9 +49,10 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Instance = this;    
+            Instance = this;
+            
         }
-        
+       
         DontDestroyOnLoad(this.gameObject);
     }
     
@@ -59,6 +63,8 @@ public class GameManager : MonoBehaviour
         costTrainning = 5;
         costPlugin = 5;
         costLevelUp = 2;
+        
+        
     }
 
     private void setPlayerDefaultStats()
@@ -111,5 +117,7 @@ public class GameManager : MonoBehaviour
         costLevelUp = costLevelUp * 2;
         return costLevelUp;
     }
+
+  
 
 }

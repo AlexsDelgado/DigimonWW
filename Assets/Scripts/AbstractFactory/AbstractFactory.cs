@@ -85,7 +85,7 @@ namespace AbstractFactory
         {
             var boughtPlugin = new PluginFactory();
             Plugin producedPlugin = boughtPlugin.GetPlugin("HP");
-            Debug.Log($"Se obtuvo plugin {producedPlugin.tier.ToString()}, de {producedPlugin.stat}, que aumenta un {producedPlugin.ammount} ");
+            // DEBUG_REMOVED: Debug.Log($"Se obtuvo plugin {producedPlugin.tier.ToString()}, de {producedPlugin.stat}, que aumenta un {producedPlugin.ammount} ");
 
         }
     }

@@ -50,7 +50,7 @@ public class StatsMenu : MonoBehaviour, ICurrency
                 //trainWsd();
                 break;
             default:
-                Debug.Log("Invalid Command");
+                // DEBUG_REMOVED: Debug.Log("Invalid Command");
                 break;
         }
         SetCurrencyUI();
@@ -91,12 +91,12 @@ public class StatsMenu : MonoBehaviour, ICurrency
         {
             AudioManager.Instance.PlaySound(upgrade);
             GameManager.Instance.playerDigimon.baseMaxHp += cost;
-            Debug.Log("HP actual de bearmon :" + GameManager.Instance.playerDigimon.baseMaxHp);
+            // DEBUG_REMOVED: Debug.Log("HP actual de bearmon :" + GameManager.Instance.playerDigimon.baseMaxHp);
             UpdateCurrency();
         }
         else
         {
-            Debug.Log("Tu digimon no tiene suficiente experiencia");
+            // DEBUG_REMOVED: Debug.Log("Tu digimon no tiene suficiente experiencia");
         }
     }
     public void TrainDMG()
@@ -106,12 +106,12 @@ public class StatsMenu : MonoBehaviour, ICurrency
         {
             AudioManager.Instance.PlaySound(upgrade);
             GameManager.Instance.playerDigimon.baseDamage += cost;
-            Debug.Log("DMG actual de bearmon :" + GameManager.Instance.playerDigimon.baseDamage);
+            // DEBUG_REMOVED: Debug.Log("DMG actual de bearmon :" + GameManager.Instance.playerDigimon.baseDamage);
             UpdateCurrency();
         }
         else
         {
-            Debug.Log("Tu digimon no puede hacer eso");
+            // DEBUG_REMOVED: Debug.Log("Tu digimon no puede hacer eso");
         }
     }
     public void TrainWSD()
@@ -121,12 +121,12 @@ public class StatsMenu : MonoBehaviour, ICurrency
         {
             AudioManager.Instance.PlaySound(upgrade);
             GameManager.Instance.playerDigimon.wisdom += cost;
-            Debug.Log("WSD actual de bearmon :" + GameManager.Instance.playerDigimon.wisdom);
+            // DEBUG_REMOVED: Debug.Log("WSD actual de bearmon :" + GameManager.Instance.playerDigimon.wisdom);
             UpdateCurrency();
         }
         else
         {
-            Debug.Log("Tu digimon no puede hacer eso");
+            // DEBUG_REMOVED: Debug.Log("Tu digimon no puede hacer eso");
         }
     }
     public void UpdateCurrency()

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using System;
 using Random = UnityEngine.Random;
@@ -30,7 +29,10 @@ namespace Observer
             }
             DontDestroyOnLoad(this.gameObject);
 
-            transitionANIM.sfxTransition += PlaySound;
+            if (transitionANIM != null)
+            {
+                transitionANIM.sfxTransition += PlaySound;
+            }
             
             
 
@@ -39,7 +41,14 @@ namespace Observer
         private void Start()
         {
             PlayMusicLobby();
-            transitionANIM= FindObjectOfType<Transition>();
+            if (transitionANIM == null)
+            {
+                transitionANIM = FindObjectOfType<Transition>();
+                if (transitionANIM != null)
+                {
+                    transitionANIM.sfxTransition += PlaySound;
+                }
+            }
         }
 
         public void PlaySound(AudioClip clip)
@@ -50,8 +59,24 @@ namespace Observer
         public void StartCombat()
         {
             CM_Manager = FindObjectOfType<CombatManager>();
-            CM_Manager.sfx += PlaySound;
-            CM_Manager.music+= PlayMusicBattle;
+            if (CM_Manager != null)
+            {
+                CM_Manager.sfx += PlaySound;
+                CM_Manager.music+= PlayMusicBattle;
+            }
+        }
+
+        private void OnDestroy()
+        {
+            if (transitionANIM != null)
+            {
+                transitionANIM.sfxTransition -= PlaySound;
+            }
+            if (CM_Manager != null)
+            {
+                CM_Manager.sfx -= PlaySound;
+                CM_Manager.music -= PlayMusicBattle;
+            }
         }
 
 

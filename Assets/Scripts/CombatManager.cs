@@ -131,6 +131,10 @@ public class CombatManager : MonoBehaviour
         texto.text = playerUnit.unitName + " ataca a " + enemyUnit.unitName;
         sfx(attackPlayer);
         updateHPEnemy(enemyUnit.currentHP);
+        
+        // Registrar métrica de habilidad especial del jugador
+        AnalyticsManager.instance.Metric_Skill();
+        
         yield return new WaitForSeconds(2f);
   
         playerGameObject.transform.position = playerPosition.position;
@@ -167,6 +171,10 @@ public class CombatManager : MonoBehaviour
         sfx(attackPlayer);
         texto.text = playerUnit.unitName + " ataca a " + enemyUnit.unitName;
         updateHPEnemy(enemyUnit.currentHP);
+        
+        // Registrar métrica de ataque del jugador
+        AnalyticsManager.instance.Metric_Attack();
+        
         yield return new WaitForSeconds(2f);
         playerGameObject.transform.position = playerPosition.position;
         if (isDead)
@@ -231,8 +239,12 @@ public class CombatManager : MonoBehaviour
             sfx(Win);
             GameManager.Instance.EXP += enemyData.reward;
             GameManager.Instance.Gold += enemyData.reward;
-            Debug.Log("exp :" + GameManager.Instance.EXP);
-            Debug.Log("gold :" + GameManager.Instance.Gold);
+            // DEBUG_REMOVED: Debug.Log("exp :" + GameManager.Instance.EXP);
+            // DEBUG_REMOVED: Debug.Log("gold :" + GameManager.Instance.Gold);
+            
+            // Registrar métrica de victoria del jugador
+            AnalyticsManager.instance.Metric_Win();
+            
             yield return new WaitForSeconds(2f);
             GameManager.Instance.returnMainIsland(true);
 
@@ -245,6 +257,7 @@ public class CombatManager : MonoBehaviour
             sfx(Lose);
             yield return new WaitForSeconds(2f);
             GameManager.Instance.returnMainIsland(false);
+            AnalyticsManager.instance.Metric_Defeat();
         }
     }
 
@@ -259,6 +272,10 @@ public class CombatManager : MonoBehaviour
         playerUnit.Heal(playerData.wisdom);
         UI_instance.SetPlayerHP(playerUnit.currentHP);
         texto.text = playerUnit.unitName + " recupera un poco de fuerza";
+        
+        // Registrar métrica de curación del jugador
+        AnalyticsManager.instance.Metric_Heal();
+        
         yield return new WaitForSeconds(2f);
 
         state = BattleSate.ENEMY;

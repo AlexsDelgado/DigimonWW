@@ -22,7 +22,8 @@ public class Unit : MonoBehaviour
         
         //subir stats digimon
         defense = unitData.baseDef * unitLevel;
-        currentHP = unitData.baseMaxHp * unitLevel;
+        maxHP = unitData.baseMaxHp * unitLevel;
+        currentHP = maxHP;
         damage = unitData.baseDamage * unitLevel;
     }
     public void TakeDamage(int dmg)

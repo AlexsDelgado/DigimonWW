@@ -261,6 +261,7 @@ MonoBehaviour:
   unitName: GabuSO
   unitLevel: 1
   damage: 15
+  defense: 0
   maxHP: 150
   currentHP: 140
 --- !u!114 &4895308620778527482
@@ -1164,7 +1165,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4568395171186005301, guid: 7bfa67a0de05d4142921e45dbbb13dd7, type: 3}
+  - {fileID: 2100000, guid: 523fcd2a92792d34899604396109eeb8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
