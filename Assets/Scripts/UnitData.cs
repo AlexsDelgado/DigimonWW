@@ -13,4 +13,5 @@ public class UnitData : ScriptableObject
 
     public int wisdom = 5;
     public int reward = 5;
+    public string skill = "defaultSKill";
 }

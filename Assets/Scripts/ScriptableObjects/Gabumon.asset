@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Gabumon
   m_EditorClassIdentifier: 
   isPlayer: 0
-  unitName: Gabugod
+  unitName: Gabumon
   unitLevel: 3
   baseDamage: 10
   baseDef: 20

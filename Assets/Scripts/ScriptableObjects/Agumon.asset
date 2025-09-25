@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Agumon
   m_EditorClassIdentifier: 
   isPlayer: 0
-  unitName: Agumoncin
+  unitName: Agumon
   unitLevel: 2
   baseDamage: 12
   baseDef: 15

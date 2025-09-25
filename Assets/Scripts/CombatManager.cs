@@ -41,6 +41,7 @@ public class CombatManager : MonoBehaviour
     [SerializeField] public UnitData enemyData;
 
     [SerializeField] public GameObject EvolutionPf;
+    private bool dv = false;
     private bool accion = true;
     private bool skill = true;
 
@@ -133,7 +134,15 @@ public class CombatManager : MonoBehaviour
         updateHPEnemy(enemyUnit.currentHP);
         
         // Registrar métrica de habilidad especial del jugador
-        AnalyticsManager.instance.Metric_Skill();
+        if(dv)
+        {
+            AnalyticsManager.instance.Metric_Skill("Grizzly Claw", 1);
+        }
+        else
+        {
+            AnalyticsManager.instance.Metric_Skill(playerData.skill, 1);
+        }
+        //AnalyticsManager.instance.Metric_Skill(playerUnit.skill, 1);
         
         yield return new WaitForSeconds(2f);
   
@@ -173,7 +182,8 @@ public class CombatManager : MonoBehaviour
         updateHPEnemy(enemyUnit.currentHP);
         
         // Registrar métrica de ataque del jugador
-        AnalyticsManager.instance.Metric_Attack();
+        //AnalyticsManager.instance.Metric_Attack();
+        AnalyticsManager.instance.Metric_Attack("basic", playerUnit.damage);
         
         yield return new WaitForSeconds(2f);
         playerGameObject.transform.position = playerPosition.position;
@@ -243,8 +253,9 @@ public class CombatManager : MonoBehaviour
             // DEBUG_REMOVED: Debug.Log("gold :" + GameManager.Instance.Gold);
             
             // Registrar métrica de victoria del jugador
-            AnalyticsManager.instance.Metric_Win();
-            
+            //AnalyticsManager.instance.Metric_Win();
+            AnalyticsManager.instance.Metric_Win(1, enemyUnit.unitName);
+            Debug.Log("Metric_Win: " + enemyUnit.unitName);
             yield return new WaitForSeconds(2f);
             GameManager.Instance.returnMainIsland(true);
 
@@ -257,7 +268,8 @@ public class CombatManager : MonoBehaviour
             sfx(Lose);
             yield return new WaitForSeconds(2f);
             GameManager.Instance.returnMainIsland(false);
-            AnalyticsManager.instance.Metric_Defeat();
+            //AnalyticsManager.instance.Metric_Defeat();
+            AnalyticsManager.instance.Metric_Defeat(1, enemyUnit.unitName);
         }
     }
 
@@ -329,7 +341,7 @@ public class CombatManager : MonoBehaviour
             if (GameManager.Instance.DV == true)
             {
                 playerGameObject.SetActive(false);
-          
+                dv = true;
                 playerGameObject = Instantiate(EvolutionPf, playerPosition);
                 playerUnit.damage = playerUnit.damage * 2;
                 playerUnit.currentHP = playerUnit.maxHP * 2;

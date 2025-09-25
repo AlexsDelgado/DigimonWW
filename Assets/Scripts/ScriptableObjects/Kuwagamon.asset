@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Kuwagamon
   m_EditorClassIdentifier: 
   isPlayer: 0
-  unitName: KuwaSO
+  unitName: Kuwagamon
   unitLevel: 5
   baseDamage: 30
   baseDef: 30
